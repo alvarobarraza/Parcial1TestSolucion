@@ -24,7 +24,10 @@ namespace ParcialSolucion
 
         public string RegistroProducto(Producto producto)
         {
-            
+            if (producto.Stock <= 0)
+            {
+                return "La cantidad digitada no puede ser menor a 0";
+            }
 
             throw new NotImplementedException();
         }
