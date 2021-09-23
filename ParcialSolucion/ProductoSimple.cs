@@ -37,7 +37,7 @@ namespace ParcialSolucion
 
                 //ProductosSimples productosSimples = new ProductosSimples(producto);
                 //listaProductosSimples.Add(productosSimples);
-                //listaProductosSimples.Add(new ProductosSimples());
+                listaProductosSimples.Add(new ProductosSimples(producto:this));
                 //ProductosSimpless.Add(new ProductosSimples(producto: this));
 
                 return $"Se registro correctamente la cantidad del stock es de {producto.Stock}";

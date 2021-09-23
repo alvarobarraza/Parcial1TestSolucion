@@ -26,7 +26,7 @@ namespace Parcial1TestSolucion
         [Test]
         public void PuedeRegistrarLosProductos()
         {
-            var productSimple = new ProductoSimple(idProducto: "01", nombreProducto: "Salchicha", precioVenta: 2000, costoEmpresa: 1000, stock: 3);
+            var productSimple = new ProductoSimple(idProducto: "010", nombreProducto: "Salchicha", precioVenta: 2000, costoEmpresa: 1000, stock: 30);
             ProductoSimple productoSimple = new ProductoSimple();
 
             string respuesta = productoSimple.RegistroProducto(productSimple);
