@@ -27,12 +27,12 @@ namespace Parcial1TestSolucion
         public void PuedeRegistrarLosProductos()
         {
             var productSimple = new ProductoSimple(idProducto: "010", nombreProducto: "Salchicha", precioVenta: 2000, costoEmpresa: 1000, stock: 30);
-            ProductoSimple productoSimple = new ProductoSimple();
+            //ProductoSimple productoSimple = new ProductoSimple();
 
-            string respuesta = productoSimple.RegistroProducto(productSimple);
+            string respuesta = productSimple.RegistroProducto(productSimple);
 
-            //Assert.AreEqual(0, productoSimple.ProductosSimpless.Count);
-            Assert.AreEqual("Se registro correctamente la cantidad del stock es de 3", respuesta);
+           // Assert.AreEqual(0, productoSimple.ProductosSimpless.Count);
+            Assert.AreEqual("Se registro correctamente la cantidad del stock es de 30", respuesta);
 
         }
     }

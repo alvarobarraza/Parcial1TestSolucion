@@ -8,8 +8,8 @@ namespace ParcialSolucion
 {
     public class ProductoSimple : Producto
     {
-        private List<ProductosSimples> listaProductosSimples;
-        public IReadOnlyCollection<ProductosSimples> ProductosSimpless => listaProductosSimples.AsReadOnly();
+        private List<ProductoSimple> listaProductosSimples;
+        public IReadOnlyCollection<ProductoSimple> ProductosSimpless => listaProductosSimples.AsReadOnly();//leer
         public ProductoSimple()
         {
 
@@ -23,7 +23,7 @@ namespace ParcialSolucion
             CostoEmpresa = costoEmpresa;
             Stock = stock;
 
-            listaProductosSimples = new List<ProductosSimples>();
+            listaProductosSimples = new List<ProductoSimple>();
         }
 
         public string RegistroProducto(ProductoSimple producto)
@@ -37,7 +37,7 @@ namespace ParcialSolucion
 
                 //ProductosSimples productosSimples = new ProductosSimples(producto);
                 //listaProductosSimples.Add(productosSimples);
-                listaProductosSimples.Add(new ProductosSimples(producto:this));
+                listaProductosSimples.Add(producto);
                 //ProductosSimpless.Add(new ProductosSimples(producto: this));
 
                 return $"Se registro correctamente la cantidad del stock es de {producto.Stock}";
