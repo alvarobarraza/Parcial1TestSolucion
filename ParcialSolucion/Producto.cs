@@ -4,13 +4,12 @@ namespace ParcialSolucion
 {
     public abstract class Producto
     {
-        public Producto(string idProducto, string nombreProducto, decimal precio, decimal costo, int stock)
+        public Producto(string idProducto, string nombreProducto,  decimal costo)
         {
             IdProducto = idProducto;
             NombreProducto = nombreProducto;
-            Precio = precio;
             Costo = costo;
-            Stock = stock;
+    
         }
 
         public Producto()

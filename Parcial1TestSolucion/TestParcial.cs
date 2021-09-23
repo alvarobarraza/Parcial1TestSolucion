@@ -10,9 +10,9 @@ namespace Parcial1TestSolucion
         }
 
         [Test]
-        public void Test1()
+        public void NoPuedeRegistrarCantidadMenorAUno()
         {
-            Assert.Pass();
+            
         }
     }
 }
