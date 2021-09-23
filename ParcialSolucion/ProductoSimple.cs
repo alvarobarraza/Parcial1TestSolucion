@@ -8,6 +8,7 @@ namespace ParcialSolucion
 {
     public class ProductoSimple : Producto
     {
+        public List<ProductosSimples> listaProductosSimples;
         public ProductoSimple()
         {
 
@@ -20,6 +21,8 @@ namespace ParcialSolucion
             PrecioVenta = precioVenta;
             Costo = costo;
             Stock = stock;
+
+            listaProductosSimples = new List<ProductosSimples>();
         }
 
         public string RegistroProducto(Producto producto)
@@ -38,6 +41,16 @@ namespace ParcialSolucion
 
             throw new NotImplementedException();
         }
+    }
+
+    public class ProductosSimples
+    {
+        public ProductosSimples(ProductoSimple producto )
+        {
+            ProductoSimple = producto;
+        }
+
+        public ProductoSimple ProductoSimple { get; set; }
     }
 
 }
