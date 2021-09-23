@@ -8,8 +8,8 @@ namespace ParcialSolucion
 {
     public class ProductoSimple : Producto
     {
-        public List<ProductosSimples> listaProductosSimples;
-        public IReadOnlyCollection<ProductosSimples> ProductosSimples => listaProductosSimples.AsReadOnly();
+        private List<ProductosSimples> listaProductosSimples;
+        public IReadOnlyCollection<ProductosSimples> ProductosSimpless => listaProductosSimples.AsReadOnly();
         public ProductoSimple()
         {
 
@@ -34,9 +34,11 @@ namespace ParcialSolucion
             }
             if (producto.Stock > 0)
             {
+
                 //ProductosSimples productosSimples = new ProductosSimples(producto);
                 //listaProductosSimples.Add(productosSimples);
-                listaProductosSimples.Add(new ProductosSimples(producto: producto));
+                //listaProductosSimples.Add(new ProductosSimples());
+                //ProductosSimpless.Add(new ProductosSimples(producto: this));
 
                 return $"Se registro correctamente la cantidad del stock es de {producto.Stock}";
             }
@@ -56,10 +58,15 @@ namespace ParcialSolucion
     {
         public ProductosSimples(ProductoSimple producto )
         {
-            ProductoSimple = producto;
+            ProductosSimple = producto;
         }
 
-        public ProductoSimple ProductoSimple { get; set; }
+        public ProductosSimples()
+        {
+
+        }
+
+        public ProductoSimple ProductosSimple { get; set; }
     }
 
 }
