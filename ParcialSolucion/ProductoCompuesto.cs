@@ -19,12 +19,12 @@ namespace ParcialSolucion
             ListaProductoCompuesto = listaProductoCompuesto;
         }
 
-        public ProductoCompuesto(string idProducto, string nombreProducto, decimal precioVenta, decimal costo, int stock) : base(idProducto, nombreProducto, precioVenta, costo, stock)
+        public ProductoCompuesto(string idProducto, string nombreProducto, decimal precioVenta, decimal costoEmpresa, int stock) : base(idProducto, nombreProducto, precioVenta, costoEmpresa, stock)
         {
             IdProducto = idProducto;
             NombreProducto = nombreProducto;
             PrecioVenta = precioVenta;
-            Costo = costo;
+            CostoEmpresa = costoEmpresa;
             Stock = stock;
         }
 

@@ -14,10 +14,10 @@ namespace Parcial1TestSolucion
         [Test]
         public void NoPuedeRegistrarCantidadMenorAUno()
         {
-            var producto = new Producto(idProducto: "01", nombreProducto: "Salchicha", precioVenta: 2000, costoEmpresa: 1000, stock: -2);
+            var productSimple = new ProductoSimple(idProducto: "01", nombreProducto: "Salchicha", precioVenta: 2000, costoEmpresa: 1000, stock: -2);
             ProductoSimple productoSimple = new ProductoSimple();
 
-            string respuesta = productoSimple.RegistroProducto(producto);
+            string respuesta = productoSimple.RegistroProducto(productSimple);
 
             Assert.AreEqual("La cantidad digitada no puede ser menor a 0", respuesta);
 
@@ -26,10 +26,10 @@ namespace Parcial1TestSolucion
         [Test]
         public void PuedeRegistrarLosProductos()
         {
-            var producto = new Producto(idProducto: "01", nombreProducto: "Salchicha", precioVenta: 2000, costoEmpresa: 1000, stock: 3);
+            var productSimple = new ProductoSimple(idProducto: "01", nombreProducto: "Salchicha", precioVenta: 2000, costoEmpresa: 1000, stock: 3);
             ProductoSimple productoSimple = new ProductoSimple();
 
-            string respuesta = productoSimple.RegistroProducto(producto);
+            string respuesta = productoSimple.RegistroProducto(productSimple);
 
             Assert.AreEqual(1, productoSimple.listaProductosSimples.Count);
             Assert.AreEqual("Se registro correctamente la cantidad del stock es de 3", respuesta);

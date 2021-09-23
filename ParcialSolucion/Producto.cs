@@ -8,7 +8,7 @@ namespace ParcialSolucion
         {
             IdProducto = idProducto;
             NombreProducto = nombreProducto;
-            Costo = costoEmpresa;
+            CostoEmpresa = costoEmpresa;
             PrecioVenta = precioVenta;
             Stock = stock;
     
@@ -22,7 +22,7 @@ namespace ParcialSolucion
         public string IdProducto { get; set; }
         public string NombreProducto { get; set; }
         public decimal PrecioVenta { get; set; }
-        public decimal Costo { get; set; }
+        public decimal CostoEmpresa { get; set; }
         public int Stock { get; set; }
 
 
